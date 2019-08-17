@@ -3,7 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, build/target/product/generic_no_telephony.mk)
 
 
-LOCAL_PATH := device/rockchip/rk2928sdk
+LOCAL_PATH := device/rockchip/rk30sdk
 ifeq ($(TARGET_PREBUILT_KERNEL),)
         LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -16,5 +16,6 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_rk2928sdk
-PRODUCT_DEVICE := rk2928sdk
+PRODUCT_NAME := full_rk30sdk
+PRODUCT_DEVICE := rk30sdk
+
