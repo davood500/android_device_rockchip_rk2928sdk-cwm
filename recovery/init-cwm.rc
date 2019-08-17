@@ -11,17 +11,15 @@ on init
 
     mkdir /boot
     mkdir /sdcard
-    mkdir /sd-ext
     mkdir /datadata
-    mkdir /emmc
     mkdir /system
     mkdir /data
     mkdir /cache
     mkdir /kernel
     mount tmpfs tmpfs /tmp
-    mount ext4 /dev/block/mtdblock5 /cache
-    mount ext4 /dev/block/mtdblock6 /data
-    mount ext4 /dev/block/mtdblock8 /system
+    mount ext4 /dev/block/mmcblk1p9 /cache
+    mount ext4 /dev/block/mmcblk1p17 /data
+    mount ext4 /dev/block/mmcblk1p11 /system
         
     write /sys/devices/virtual/bdi/179:0/read_ahead_kb 2048
     write /sys/devices/virtual/bdi/7:0/read_ahead_kb 2048
